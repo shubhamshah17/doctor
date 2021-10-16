@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DoctorRegister"
+    android:background="@color/register_bk_color"
+    android:focusableInTouchMode="true"
+    android:gravity="center"
+    android:layout_gravity="center">
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    style="@style/viewParent.headerText.NoMode"
+                    android:textColor="@color/whiteTextColor"
+                    android:text="Hello\nDoctor! "/>
+
+<!--                <ImageView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:src="@drawable/ic_doctor"-->
+<!--                    android:layout_alignParentTop="true"-->
+<!--                    android:layout_alignParentRight="true"/>-->
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="247dp"
+                    android:layout_height="188dp"
+                    app:lottie_loop="true"
+                    app:lottie_autoPlay="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    app:lottie_url="https://assets9.lottiefiles.com/packages/lf20_wdXBRc.json"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tyMsg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:textAlignment="center"
+                android:visibility="gone"
+                style="@style/viewParent.headerText.NoMode"
+                android:text="Thank you for registering with us\nWe will get back to you soon" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                app:cardBackgroundColor="@color/whiteTextColor"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Register yourself and you will be notified by the admin regarding further process\nAlso Upload scanned Doctor Certificate"
+                        android:textColor="#000000" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/et_Docname"
+                        style="@style/parent"
+                        android:layout_marginTop="20dp">
+
+                        <EditText
+                            style="@style/modifiedEditText"
+                            android:drawableLeft="@drawable/ic_user"
+                            android:drawablePadding="10dp"
+                            android:hint="Name"
+                            android:inputType="textPersonName"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/et_Docemail"
+                        style="@style/parent"
+                        android:layout_marginTop="20dp">
+
+                        <EditText
+                            style="@style/modifiedEditText"
+                            android:drawableLeft="@drawable/ic_email"
+                            android:drawablePadding="10dp"
+                            android:hint="Email"
+                            android:inputType="textEmailAddress"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/et_Docphone"
+                        style="@style/parent"
+                        android:layout_marginTop="20dp">
+
+                        <EditText
+                            style="@style/modifiedEditText"
+                            android:drawableLeft="@drawable/ic_phone"
+                            android:drawablePadding="10dp"
+                            android:hint="Mobile Number"
+                            android:inputType="phone"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/camera"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/addphoto_bg"
+                        android:drawablePadding="10dp"
+                        android:paddingStart="10dp"
+                        android:gravity="center"
+                        android:text="Add Photo"
+                        android:drawableLeft="@drawable/ic_camera"/>
+
+                    <ImageView
+                        android:id="@+id/image"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center"
+                        android:visibility="gone"/>
+
+                    <Button
+                        android:id="@+id/upload"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Upload"
+                        android:background="@drawable/button_bg_extras"
+                        android:layout_marginTop="20dp"
+                        android:visibility="gone"
+                        android:layout_gravity="center"/>
+
+                    <Button
+                        android:id="@+id/DocRegister"
+                        style="@style/loginButton"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20dp"
+                        android:text="Register"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

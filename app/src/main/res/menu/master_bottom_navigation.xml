@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigationAppointment"
+        android:icon="@drawable/ic_appointment"
+        android:title="Appointments" />
+
+    <item
+        android:id="@+id/navigationHome"
+        android:icon="@drawable/ic_home"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/navigationMyProfile"
+        android:icon="@drawable/ic_menu"
+        android:title="More" />
+
+</menu>

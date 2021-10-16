@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/contentTextColor"
+            android:text="Profile"
+            android:gravity="center"/>
+
+        <RelativeLayout
+            android:id="@+id/myprofile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:layout_marginTop="20dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileCircleImageView"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#13D3B4"
+                android:src="@drawable/ic_userprofile"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"/>
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/profileCircleImageView"
+                android:textColor="@color/contentTextColor"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="View Personal details"
+                android:textSize="16sp"
+                android:textColor="#5D5C5C"
+                android:layout_below="@id/username"
+                android:layout_toRightOf="@id/profileCircleImageView"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_more"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/editprofile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="#2A2E43"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:drawablePadding="20dp"
+            android:gravity="center_vertical"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center_vertical"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:drawableRight="@drawable/ic_more"
+            android:drawableLeft="@drawable/ic_edit_profile"
+            android:text="Edit Profile" />
+
+        <TextView
+            android:id="@+id/editPass"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="#2A2E43"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:drawablePadding="20dp"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:drawableRight="@drawable/ic_more"
+            android:drawableLeft="@drawable/ic_edit_password"
+            android:layout_marginTop="15dp"
+            android:text="Change Password" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="15sp"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:textColor="#5D5C5C"
+            android:text="Tools"/>
+
+        <TextView
+            android:id="@+id/BMICalc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="#2A2E43"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:drawablePadding="20dp"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:drawableRight="@drawable/ic_more"
+            android:layout_marginTop="20dp"
+            android:drawableLeft="@drawable/ic_bmicalc"
+            android:text="BMI Calculator" />
+
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:textColor="#2A2E43"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="15sp"-->
+<!--            android:drawablePadding="20dp"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:layout_gravity="center_vertical"-->
+<!--            android:drawableRight="@drawable/ic_more"-->
+<!--            android:background="?attr/selectableItemBackground"-->
+<!--            android:clickable="true"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:drawableLeft="@drawable/ic_health"-->
+<!--            android:text="Read about health" />-->
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="15sp"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:textColor="#5D5C5C"
+            android:text="Notifications"/>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/NotifcationSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="#2A2E43"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:drawablePadding="20dp"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="20dp"
+            android:checked="true"
+            android:drawableLeft="@drawable/ic_notifications"
+            android:text="Notifications" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="15sp"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:textColor="#5D5C5C"
+            android:text="General"/>
+
+        <!--        <TextView-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:textColor="#2A2E43"-->
+        <!--            android:textStyle="bold"-->
+        <!--            android:textSize="15sp"-->
+        <!--            android:drawablePadding="20dp"-->
+        <!--            android:gravity="center_vertical"-->
+        <!--            android:layout_gravity="center_vertical"-->
+        <!--            android:drawableRight="@drawable/ic_more"-->
+        <!--            android:layout_marginTop="20dp"-->
+        <!--            android:drawableLeft="@drawable/ic_languages"-->
+        <!--            android:text="Language" />-->
+
+        <TextView
+            android:id="@+id/aboutUs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="#2A2E43"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:drawablePadding="20dp"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:drawableRight="@drawable/ic_more"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:layout_marginTop="20dp"
+            android:drawableLeft="@drawable/ic_about"
+            android:text="About Us" />
+
+        <TextView
+            android:id="@+id/areUDoctor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="#2A2E43"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:drawablePadding="20dp"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:drawableRight="@drawable/ic_more"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:layout_marginTop="20dp"
+            android:drawableLeft="@drawable/ic_doctoricon"
+            android:text="Are you a doctor" />
+
+        <TextView
+            android:id="@+id/shareapp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="#2A2E43"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:drawablePadding="20dp"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:drawableRight="@drawable/ic_more"
+            android:layout_marginTop="20dp"
+            android:drawableLeft="@drawable/ic_share"
+            android:text="Share with family and friends" />
+
+        <TextView
+            android:id="@+id/feedback"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="#2A2E43"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:drawablePadding="20dp"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:drawableRight="@drawable/ic_more"
+            android:layout_marginTop="20dp"
+            android:drawableLeft="@drawable/ic_feedback"
+            android:text="Feedback" />
+
+        <TextView
+            android:id="@+id/logout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="#2A2E43"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:drawablePadding="20dp"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:drawableRight="@drawable/ic_more"
+            android:layout_marginTop="20dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:drawableLeft="@drawable/ic_logout"
+            android:text="Logout" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="15sp"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:textColor="#5D5C5C"
+            android:text="App ver 1.0.0"
+            android:textAlignment="center"/>
+
+    </LinearLayout>
+</ScrollView>
